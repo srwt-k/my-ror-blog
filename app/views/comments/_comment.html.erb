@@ -1,0 +1,15 @@
+
+  <p>
+    <strong><%= comment.commenter %>:</strong>
+  </p>
+
+  <p>
+    <%= comment.body %>
+  </p>
+
+  <div class="text-end">
+    <%= link_to "Destroy Comment", [comment.article, comment], data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                }, :class => "btn btn-sm btn-danger" %>
+  </div>
